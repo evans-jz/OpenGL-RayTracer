@@ -37,28 +37,27 @@ public class Triangle extends Shape {
 		n2 = new Vector3f(_n2);
 	}
 	public HitRecord hit(Ray ray, float tmin, float tmax) {
-
 		/* YOUR WORK HERE: complete the triangle's intersection routine
 		 * Normal should be computed by a bilinear interpolation from n0, n1 and n2
 		 * using the barycentric coordinates: alpha, beta, (1.0 - alpha - beta) */
-		Vector3f d = ray.getDirection();
-		Matrix3f original = new Matrix3f(p1.x - p0.x, p2.x - p0.x, -d.x,
-				p1.y - p0.y, p2.y - p0.y, -d.y,
-				p1.z - p0.z, p2.z - p0.z, -d.z);
-		Vector3f answer = new Vector3f(ray.getOrigin().x - p0.x, ray.getOrigin().y - p0.y,
-				ray.getOrigin().z - p0.z);
-		Matrix3f mx = new Matrix3f(p1.x - p0.x, p2.x - p0.x, -d.x,
-				p1.y - p0.y, p2.y - p0.y, -d.y,
-				p1.z - p0.z, p2.z - p0.z, -d.z);
-		mx.setColumn(0, answer);
-		Matrix3f my = new Matrix3f(p1.x - p0.x, p2.x - p0.x, -d.x,
-				p1.y - p0.y, p2.y - p0.y, -d.y,
-				p1.z - p0.z, p2.z - p0.z, -d.z);
-		my.setColumn(1, answer);
-		Matrix3f mz = new Matrix3f(p1.x - p0.x, p2.x - p0.x, -d.x,
-				p1.y - p0.y, p2.y - p0.y, -d.y,
-				p1.z - p0.z, p2.z - p0.z, -d.z);
-		mz.setColumn(2, answer);
+		Vector3f direction = ray.getDirection();
+		Matrix3f original = new Matrix3f(p1.x - p0.x, p2.x - p0.x, -direction.x,
+				p1.y - p0.y, p2.y - p0.y, -direction.y,
+				p1.z - p0.z, p2.z - p0.z, -direction.z);
+		Matrix3f mx = new Matrix3f(p1.x - p0.x, p2.x - p0.x, -direction.x,
+				p1.y - p0.y, p2.y - p0.y, -direction.y,
+				p1.z - p0.z, p2.z - p0.z, -direction.z);
+
+		Matrix3f my = new Matrix3f(p1.x - p0.x, p2.x - p0.x, -direction.x,
+				p1.y - p0.y, p2.y - p0.y, -direction.y,
+				p1.z - p0.z, p2.z - p0.z, -direction.z);
+		Matrix3f mz = new Matrix3f(p1.x - p0.x, p2.x - p0.x, -direction.x,
+				p1.y - p0.y, p2.y - p0.y, -direction.y,
+				p1.z - p0.z, p2.z - p0.z, -direction.z);
+		Vector3f temp = new Vector3f(ray.getOrigin().x - p0.x, ray.getOrigin().y - p0.y,ray.getOrigin().z - p0.z);
+		mx.setColumn(0, temp);
+		my.setColumn(1, temp);
+		mz.setColumn(2, temp);
 
 		float dOriginal = original.determinant();
 		float beta = mx.determinant() / dOriginal;
@@ -66,24 +65,16 @@ public class Triangle extends Shape {
 		float alpha = 1 - beta - gamma;
 		float t = mz.determinant() / dOriginal;
 
-		if((alpha >= 0) && (beta >= 0) && (gamma >= 0) && (t >= tmin) && (t <= tmax)){
-			//hit
-			//normal=	alpha*N0 + beta*N1 + gamma*N2
-			Vector3f tempn0 = new Vector3f(n0);
-			Vector3f tempn1 = new Vector3f(n1);
-			Vector3f tempn2 = new Vector3f(n2);
-			tempn0.scale(alpha);//scale
-			tempn1.scale(beta);
-			tempn2.scale(gamma);
-			tempn0.add(tempn1);//add
-			tempn0.add(tempn2);
-
+		if(t >= tmin && t <= tmax && alpha >= 0 && beta >= 0 && gamma >= 0 ){
+			Vector3f normal = new Vector3f(alpha * n0.x + beta * n1.x + gamma * n2.x,
+					alpha * n0.y + beta * n1.y + gamma * n2.y,
+					alpha * n0.z + beta * n1.z + gamma * n2.z);
 			HitRecord rec = new HitRecord();
-			rec.pos = ray.pointAt(t);		// position of hit point
-			rec.t = t;						// parameter t (distance along the ray)
-			rec.material = material;		// material
-			rec.normal = new Vector3f(tempn0);			// norm calculated above
-			rec.normal.normalize();			// normal should be normalized
+			rec.pos = ray.pointAt(t);
+			rec.t = t;
+			rec.material = material;
+			rec.normal = normal;
+			rec.normal.normalize();
 			return rec;
 		} else {
 			return null;

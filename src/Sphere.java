@@ -16,61 +16,48 @@ public class Sphere extends Shape {
 	}
 
     public HitRecord hit(Ray ray, float tmin, float tmax) {
-
         /* YOUR WORK HERE: complete the sphere's intersection routine */
         Vector3f origin = new Vector3f(ray.getOrigin());
         Vector3f direction = new Vector3f(ray.getDirection());
-
         origin.sub(center);
 
         float a = direction.lengthSquared();
         float b = 2* origin.dot(direction);
         float c = origin.lengthSquared() - (radius * radius);
-        float rootValue = (float) (b * b - 4.0 * a * c);
-        
-        float sqRoot = (float) Math.sqrt(rootValue);
-        
-        if (rootValue <= 0) {
+        float root_value = (float) (b * b - 4.0 * a * c);
+        float sqRoot = (float) Math.sqrt(root_value);
+
+        float t;
+        float t1 = (-b + sqRoot) / (2.0f * a);
+        float t2 = (-b - sqRoot) / (2.0f * a);
+        if(root_value < 0)
             return null;
-        }
-
-        float temp1 = (-b + sqRoot) / (2.0f * a);
-        float temp2 = (-b - sqRoot) / (2.0f * a);
-
-        float temp;
-
-        if(rootValue == 0){
-            if ( temp1 >= 0 && temp1 >= tmin && temp1 <= tmax ){
-                temp = temp1;
-            }
+        else if(root_value == 0){
+            if (t1 >= 0 && t1 >= tmin && t1 <= tmax )
+                t = t1;
             else
                 return null;
         }
-        else if(rootValue > 0){
-            if (temp1 > tmin && temp1 <= tmax) {
-                if (tmin<=temp2 && temp2<=tmax && temp2 < temp1){
-                    temp=temp2;
-                }else {
-                    temp = temp1;
-                }
-            } else if (tmin<=temp2 && temp2<=tmax) {
-                temp = temp2;
-            } else {
+        else {
+            if (t1 > tmin && t1 <= tmax) {
+                if (tmin<=t2 && t2<=tmax && t2 < t1)
+                    t=t2;
+                else
+                    t = t1;
+            } else if (tmin<=t2 && t2<=tmax)
+                t = t2;
+             else
                 return null;
-            }
         }
-        else
-            return null;
-
-        Vector3f normal = new Vector3f(ray.pointAt(temp));
-        normal.sub(center);
         HitRecord rec = new HitRecord();
-        rec.pos = ray.pointAt(temp);
-        rec.t = temp;
+        rec.pos = ray.pointAt(t);
+        rec.t = t;
         rec.material = material;
+        Vector3f normal = new Vector3f(ray.pointAt(t));
+        normal.sub(center);
+        normal.scale((float)1/normal.length());
         rec.normal = normal;
         rec.normal.normalize();
-
         return rec;
     }
 }

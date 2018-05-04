@@ -2,15 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0ccfce7-30f4-4193-9046-11b454efbbe1" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/OpenGL-RayTracer.zip" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ball_glass.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ball_mirror.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ball_pointlight.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ball_spotlight.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/head.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/report.docx" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/report.pdf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/triangle_pointlight.png" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/scene/ball_arealight.scene" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/scene/ball_glass.scene" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/scene/ball_mirror.scene" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/scene/ball_pointlight.scene" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/scene/ball_spotlight.scene" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/scene/head.scene" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/scene/head_n.trimesh" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/scene/triangle_pointlight.scene" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ball_arealight.png" afterPath="$PROJECT_DIR$/ball_arealight.png" />
+      <change beforePath="$PROJECT_DIR$/lib/gluegen-java-src.zip" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/lib/gluegen-rt-natives-macosx-universal.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/lib/gluegen-rt-natives-windows-amd64.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/lib/gluegen-rt.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/lib/jogl-all-natives-macosx-universal.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/lib/jogl-all-natives-windows-amd64.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/lib/jogl-all.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/lib/jogl-java-src.zip" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/OpenGL-RayTracer/RayTracer.class" afterPath="$PROJECT_DIR$/out/production/OpenGL-RayTracer/RayTracer.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/OpenGL-RayTracer/Sphere.class" afterPath="$PROJECT_DIR$/out/production/OpenGL-RayTracer/Sphere.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/OpenGL-RayTracer/Triangle.class" afterPath="$PROJECT_DIR$/out/production/OpenGL-RayTracer/Triangle.class" />
+      <change beforePath="$PROJECT_DIR$/src/RayTracer.java" afterPath="$PROJECT_DIR$/src/RayTracer.java" />
       <change beforePath="$PROJECT_DIR$/src/Sphere.java" afterPath="$PROJECT_DIR$/src/Sphere.java" />
       <change beforePath="$PROJECT_DIR$/src/Triangle.java" afterPath="$PROJECT_DIR$/src/Triangle.java" />
     </list>
@@ -24,21 +38,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RayTracer.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RayTracer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/RayTracer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="204" column="30" lean-forward="false" selection-start-line="204" selection-start-column="30" selection-end-line="204" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Triangle.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Triangle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="79" column="0" lean-forward="true" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+            <state relative-caret-position="290">
+              <caret line="92" column="37" lean-forward="false" selection-start-line="92" selection-start-column="37" selection-end-line="92" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -52,11 +56,23 @@
       <find>sqRootValue</find>
       <find>undefine</find>
       <find>original</find>
+      <find>rootValue</find>
+      <find>temp</find>
+      <find>tempn2</find>
+      <find>normal</find>
+      <find>checkin</find>
+      <find>lightDir</find>
+      <find>reflect</find>
     </findStrings>
     <replaceStrings>
       <replace>t2</replace>
       <replace>origin</replace>
+      <replace>root_value</replace>
+      <replace>t</replace>
+      <replace>temp_n2</replace>
+      <replace>n</replace>
       <replace>sqRoot</replace>
+      <replace>light_dir</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -72,6 +88,7 @@
       <list>
         <option value="$PROJECT_DIR$/src/Sphere.java" />
         <option value="$PROJECT_DIR$/src/Triangle.java" />
+        <option value="$PROJECT_DIR$/src/RayTracer.java" />
       </list>
     </option>
   </component>
@@ -81,8 +98,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="847" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="849" />
+    <option name="y" value="41" />
     <option name="width" value="1096" />
     <option name="height" value="1047" />
   </component>
@@ -160,7 +178,7 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="RayTracer" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="ball_arealight.scene" />
+      <option name="PROGRAM_PARAMETERS" value="ball_glass.scene" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -259,31 +277,30 @@
       <option name="presentableId" value="Default" />
       <updated>1525384132832</updated>
       <workItem from="1525384133975" duration="13000" />
-      <workItem from="1525384263752" duration="6754000" />
+      <workItem from="1525384263752" duration="19732000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6767000" />
+    <option name="totallyTimeSpent" value="19745000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="847" y="0" width="1096" height="1047" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.496139" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32930845" sideWeight="0.5067568" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33152175" sideWeight="0.50959486" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32930845" sideWeight="0.49324325" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33260155" sideWeight="0.496139" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.48552123" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33152175" sideWeight="0.4904051" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12355212" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.06823028" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -358,26 +375,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/HitRecord.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="7" column="60" lean-forward="false" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sphere.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-911">
-          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -390,18 +391,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RayTracer.java">
+    <entry file="file://$PROJECT_DIR$/src/Triangle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="204" column="30" lean-forward="false" selection-start-line="204" selection-start-column="30" selection-end-line="204" selection-end-column="30" />
+        <state relative-caret-position="1430">
+          <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Triangle.java">
+    <entry file="file://$PROJECT_DIR$/src/Sphere.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="79" column="0" lean-forward="true" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+        <state relative-caret-position="211">
+          <caret line="53" column="18" lean-forward="true" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RayTracer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="92" column="37" lean-forward="false" selection-start-line="92" selection-start-column="37" selection-end-line="92" selection-end-column="37" />
           <folding />
         </state>
       </provider>
